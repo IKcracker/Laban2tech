@@ -1,6 +1,10 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import hero from "./assets/hero.png";
+import hero from "./assets/main.jpg";
+import pic1 from "./assets/20231124_115809.jpg";
+import pic2 from "./assets/20231124_131410.jpg";
+import pic3 from "./assets/8G0A8515.jpg";
+import pic4 from "./assets/IMG_0138.jpg";
 import { Info_Card } from "@/_components";
 import relume from "./assets/Relume.svg";
 import avatar from "./assets/Avatar Image.png";
@@ -21,7 +25,7 @@ export default function Home() {
         <div className="w-1/2  ">
           <Image
             alt="hero"
-            src={hero}
+            src={pic1}
             className="w-1/2 z-0  left-0 top-0 absolute h-screen object-cover   "
           />
         </div>
@@ -59,12 +63,12 @@ export default function Home() {
             paragraph="Learn the fundamentals of coding and software development."
           />
           <Info_Card
-            image={hero}
+            image={pic3}
             title="Creative Digital Design and Multimedia Training"
             paragraph="Explore the world of graphic design and video editing."
           />
           <Info_Card
-            image={hero}
+            image={pic4}
             title="Hands-On Workshops for Real-World Experience"
             paragraph="Participate in interactive sessions that enhance learning."
           />
@@ -136,7 +140,13 @@ export default function Home() {
             </div>
           </div>
           <div className="py-24 w-1/2">
-            <Image src={hero} className=" w-full h-full" alt="building" />
+            <Image
+              src={pic2}
+              alt="building"
+              width={800}
+              height={400}
+              className="w-full h-[400px] object-cover"
+            />
           </div>
         </div>
       </div>
