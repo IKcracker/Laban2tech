@@ -4,7 +4,16 @@ import hero from "./assets/hero.png";
 import { Info_Card } from "@/_components";
 import relume from "./assets/Relume.svg";
 import avatar from "./assets/Avatar Image.png";
-import { StarIcon } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  StarIcon,
+  X,
+  YoutubeIcon,
+} from "lucide-react";
+import { Input } from "@/components/ui/input";
+import Link from "next/link";
 export default function Home() {
   return (
     <div>
@@ -152,6 +161,148 @@ export default function Home() {
           <div className="flex items-center justify-center">
             <p>Logo</p>
           </div>
+        </div>
+      </div>
+      <div className="bg-black flex px-4 md:px-6 lg:px-16 text-white  justify-center items-center h-96">
+        <section className="w-1/2">
+          <h2 className="text-3xl mb-4">Contact Us</h2>
+          <p className="w-[70%] text-gray-300">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
+            commodi culpa necessitatibus, assumenda iusto quas tenetur quis
+            corporis, laudantium, reiciendis repudiandae aperiam explicabo
+            minima adipisci corrupti a quos numquam beatae?
+          </p>
+        </section>
+        <section className="w-1/2 flex flex-col items-end">
+          <div className="flex mb-3 flex-col w-1/2 gap-2">
+            <label>Name</label>
+            <input
+              className="outline-none px-2 py-1 rounded-sm"
+              type="text"
+              placeholder="john"
+            />
+          </div>
+          <div className="flex  mb-3 flex-col w-1/2 gap-2">
+            <label>Email</label>
+            <input
+              className="outline-none px-2 py-1 rounded-sm"
+              type="email"
+              placeholder="john"
+            />
+          </div>
+          <div className="flex mb-3 flex-col w-1/2 gap-2">
+            <label>Message</label>
+            <textarea className="outline-none px-2 py-1 rounded-sm min-h-30"></textarea>
+          </div>
+          <button className="w-1/2 p-2 rounded-md bg-white text-black font-bold">
+            Submit
+          </button>
+        </section>
+      </div>
+      <div className="bg-black flex flex-col px-4 md:px-6 lg:px-16 text-white  justify-center items-center h-96">
+        <div className="w-[100%] bg-gray-400 h-[60%] flex gap-64 rounded-md mb-6">
+          <div className=" w-[50%] p-4">
+            <h1 className="text-2xl font-bold text-black mb-5">Logo</h1>
+            <p className="text-base text-gray-800 mb-2">
+              Subscribe to our newsletter for the latest updates on features and
+              releases.
+            </p>
+            <div className=" flex gap-3">
+              <Input
+                className=" border-2 border-gray-600"
+                placeholder="Your email here"
+                type="email"
+              />
+              <Button>Join</Button>
+            </div>
+            <p className="text-base text-gray-800 mt-2">
+              By subscribing, you consent to our Privacy Policy and receiving
+              updates from us.
+            </p>
+          </div>
+          <div className="grid w-[50%] text-black p-4 grid-cols-3">
+            <div>
+              <h4 className="text-lg font-semibold">Quick Links</h4>
+              <ul className="flex flex-col gap-2 mt-4">
+                <li>
+                  <Link href="/#">About Us</Link>
+                </li>
+                <li>
+                  <Link href="/#">Contact Us</Link>
+                </li>
+                <li>
+                  <Link href="/#">Our Services</Link>
+                </li>
+                <li>
+                  <Link href="/#">Blog Posts</Link>
+                </li>
+                <li>
+                  <Link href="/#">FAQs</Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold">Resources</h4>
+              <ul className="flex flex-col gap-2 mt-4">
+                <li>
+                  <Link href="/#">E-books</Link>
+                </li>
+                <li>
+                  <Link href="/#">Webinars</Link>
+                </li>
+                <li>
+                  <Link href="/#">Case Studies</Link>
+                </li>
+                <li>
+                  <Link href="/#">Newsletters</Link>
+                </li>
+                <li>
+                  <Link href="/#">Workshops</Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold">Connect With Us</h4>
+              <ul className="flex flex-col gap-2 mt-4">
+                <li>
+                  <Link href="/#" className="flex gap-2">
+                    <Facebook size={24} />
+                    Facebook
+                  </Link>
+                </li>
+                <li className="flex gap-2">
+                  <Instagram size={24} />
+                  <Link href="/#">Instagram</Link>
+                </li>
+                <li className="flex gap-2">
+                  <X size={24} />
+                  <Link href="/#">X</Link>
+                </li>
+                <li className="flex gap-2">
+                  <Linkedin size={24} />
+                  <Link href="/#">Linkedin</Link>
+                </li>
+                <li className="flex gap-2">
+                  <YoutubeIcon size={24} />
+                  <Link href="/#">Youtube</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="w-full flex justify-between items-between">
+          <p>© 2025 Laban2tech. All rights reserved.</p>
+          <ul className="flex gap-3">
+            <li className="underline">
+              <Link href="/#">Privacy Policy</Link>
+            </li>
+            <li className="underline">
+              <Link href="/#">Terms of Service </Link>
+            </li>
+            <li className="underline">
+              <Link href="/#">Cookie Settings</Link>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
